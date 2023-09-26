@@ -35,10 +35,12 @@ app.use(express.json())
 app.use(express.urlencoded({extended:true}))
 
 //accept req form any url put cors above route
-app.use(cors({
-   origin:["http://localhost:3000","http://mern-taask.onrender.com"]
-
-}));
+app.use(
+   cors({
+     origin: ["http://localhost:3000", "https://mern-taask.onrender.com"],
+   })
+ );
+ 
 //for routes appends /api/tasks allof the route
 app.use("/api/tasks",taskRoutes);
 
@@ -63,3 +65,4 @@ res.send("<h2>welcome to home page ...............</h2>");
 //logger is a middleware that perform something this middle ware has acess to req res and next
 //here first middle ware is run then next function is asyn will run
 
+//https://mern-taask-api.onrender.com
